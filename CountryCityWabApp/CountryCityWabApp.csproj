@@ -65,25 +65,42 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CountryIntryWabForm.aspx" />
+    <Content Include="UI\CityEntryWebForm.aspx" />
+    <Content Include="UI\CountryIntryWabForm.aspx" />
+    <Content Include="UI\ViewCitiesWebForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CityManager.cs" />
     <Compile Include="BLL\CountryManager.cs" />
-    <Compile Include="CountryIntryWabForm.aspx.cs">
+    <Compile Include="DAL\CityGateway.cs" />
+    <Compile Include="Model\City.cs" />
+    <Compile Include="UI\CityEntryWebForm.aspx.cs">
+      <DependentUpon>CityEntryWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CityEntryWebForm.aspx.designer.cs">
+      <DependentUpon>CityEntryWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CountryIntryWabForm.aspx.cs">
       <DependentUpon>CountryIntryWabForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CountryIntryWabForm.aspx.designer.cs">
+    <Compile Include="UI\CountryIntryWabForm.aspx.designer.cs">
       <DependentUpon>CountryIntryWabForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\CountryGateway.cs" />
     <Compile Include="Model\Country.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ViewCitiesWebForm.aspx.cs">
+      <DependentUpon>ViewCitiesWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ViewCitiesWebForm.aspx.designer.cs">
+      <DependentUpon>ViewCitiesWebForm.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
